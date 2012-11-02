@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/ags/.rbenv/versions/1.9.3-p194/bin'
+let g:netrw_dirhist_2='/Users/ags/index/books'
+let g:netrw_dirhist_3='/Users/ags/learnable/vmconfig/babushka-deps/commerce'
+let g:netrw_dirhist_4='/Users/ags/projects/a/config/environments'
+let g:netrw_dirhist_5='/Users/ags/projects/a/config'
+let g:netrw_dirhist_6='/Users/ags/books/nodejs/trunk/book/out'

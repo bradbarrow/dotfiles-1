@@ -1,0 +1,18 @@
+[user]
+	name = Alex Smith
+	email = alex.geoffrey.smith@gmail.com
+[color]
+	ui = auto
+[alias]
+  ci = commit -v
+	co = checkout
+  d = diff
+  dc = diff --cached
+  l = log --graph
+  st = status
+[core]
+	editor = vim
+[format]
+  pretty = format:%C(blue)%h%C(reset) - %s %C(green)- %an%C(reset) %C(blue)(%ar)%C(reset)
+[push]
+  default = current

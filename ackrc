@@ -1,0 +1,8 @@
+--type-add
+html=.html.erb,.html.haml,.haml,.slim
+
+--type-add
+css=.sass,.less,.scss
+
+--type-set
+coffee=coffee

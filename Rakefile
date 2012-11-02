@@ -49,9 +49,8 @@ def link_file(file)
 end
 
 def switch_to_zsh
-  if ENV["SHELL"] =~ /zsh/
-    puts "using zsh"
-  else
+  unless ENV["SHELL"] =~ /zsh/
+    puts "switching to zsh"
     system %Q{chsh -s `which zsh`}
   end
 end

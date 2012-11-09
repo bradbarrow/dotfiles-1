@@ -109,3 +109,6 @@ nnoremap <leader>t :w\|:call Send_to_Tmux("rspec -f d " . g:spec_file . "\n")<CR
 
 " Di-paste
 nnoremap <leader>p :r !pbpaste<CR>
+
+" Custom file-to-syntax-highlighting schemes.
+au BufNewFile,BufRead *.jbuilder set filetype=ruby

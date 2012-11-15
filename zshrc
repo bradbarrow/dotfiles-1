@@ -16,3 +16,6 @@ done
 for source in $pre_sources $auto_sources $post_sources; do
   source ~/.zsh/$source.zsh
 done
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

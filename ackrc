@@ -6,3 +6,5 @@ css=.sass,.less,.scss
 
 --type-set
 coffee=coffee
+
+--ignore-dir=coverage

@@ -106,15 +106,20 @@ if !exists('g:checksyntax')
   let g:checksyntax['ruby'] = {'auto': 1, 'prepare': 'compiler ruby', 'cmd': 'ruby -c', 'okrx': 'Syntax OK\|No Errors'}
 endif
 
-" run the current file with rspec
-nnoremap <leader>r :w\|:call Send_to_Tmux("rspec -f d " . @% . "\n")<CR>
-" set a file to run with rspec
-nnoremap <leader>T :let g:spec_file = @%<CR>
-" run the set spec file
-nnoremap <leader>t :w\|:call Send_to_Tmux("rspec -f d " . g:spec_file . "\n")<CR>
-
 " Di-paste
 nnoremap <leader>p :r !pbpaste<CR>
 
-" Custom file-to-syntax-highlighting schemes.
-au BufNewFile,BufRead *.jbuilder set filetype=ruby
+" run the current file with rspec
+" nnoremap <leader>r :w\|:call Send_to_Tmux("rspec -f d " . @% . "\n")<CR>
+" set a file to run with rspec
+nnoremap <leader>T :let g:spec_file = @%<CR>
+" run the set spec file
+nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be rspec -f d " . g:spec_file . " \n")<CR>
+
+nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
+
+"nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./index_xml.rb nodejs/chap*.xml\n")<CR>
+"nnoremap <leader>l :w\|:call Send_to_Tmux("clear && ruby script/test_lint.rb\n")<CR>
+"nnoremap <leader>r :w\|:call Send_to_Tmux("clear && be ruby script/ungoliant_benchmark.rb\n")<CR>
+nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./merry.rb index --files nodejs/chap_*.xml -r\n")<CR>
+

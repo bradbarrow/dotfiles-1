@@ -77,7 +77,7 @@ nmap tk :tabnext<CR>
 nmap tn :tabnew<CR>
 
 " Quick-edit .vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 
 " auto-reload .vimrc after save.
 autocmd! bufwritepost .vimrc source %

@@ -19,3 +19,6 @@ done
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# fucking node
+export PATH="/usr/local/share/npm/bin:$PATH"

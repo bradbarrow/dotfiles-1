@@ -61,6 +61,12 @@ set ttymouse=xterm2
 set wildmenu
 set wildmode=list:longest
 
+" Custom file-to-syntax highlighting schemes
+au BufNewFile,BufRead *.jbuilder set filetype=ruby
+
+" Treat things like @foo in ruby files as keywords
+au BufNewFile,BufRead *.rb setlocal iskeyword+=@-@
+
 " Strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 

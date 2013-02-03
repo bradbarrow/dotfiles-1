@@ -16,6 +16,4 @@ alias g='git'
 
 alias ggpush='git push origin $(current_branch)'
 
-alias gup='git fetch && git rebase'
-
 alias ggup='git fetch && git rebase origin/$(current_branch)'

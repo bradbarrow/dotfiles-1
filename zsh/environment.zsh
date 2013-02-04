@@ -1,2 +1,7 @@
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
 # Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# fucking node
+export PATH="/usr/local/share/npm/bin:$PATH"

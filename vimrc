@@ -1,5 +1,8 @@
 call pathogen#infect()
 
+" Disable vi compatibility
+set nocompatible
+
 " Smart indenting when starting new line
 set smartindent
 

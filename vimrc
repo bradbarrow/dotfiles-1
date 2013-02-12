@@ -63,6 +63,7 @@ set wildmode=list:longest
 
 " Custom file-to-syntax highlighting schemes
 au BufNewFile,BufRead *.jbuilder set filetype=ruby
+au BufNewFile,BufRead *.prawn set filetype=ruby
 
 " Treat things like @foo in ruby files as keywords
 au BufNewFile,BufRead *.rb setlocal iskeyword+=@-@

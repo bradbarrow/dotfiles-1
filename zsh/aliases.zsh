@@ -16,10 +16,16 @@ alias pgen='openssl rand -hex'
 # Git aliases
 alias g='git'
 
-alias gpush='git push origin $(current_branch)'
+alias gp='git push origin $(current_branch)'
 
-alias gup='git fetch && git rebase origin/$(current_branch)'
+alias gd='git fetch && git rebase origin/$(current_branch)'
 
-alias gap='git add -p'
+alias ga='git add -p'
 
 alias gc='git ci'
+
+alias gs='git st'
+
+alias gdp='gd && gp'
+
+alias gl='git log'

@@ -127,5 +127,9 @@ nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file .
 "nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./index_xml.rb nodejs/chap*.xml\n")<CR>
 "nnoremap <leader>l :w\|:call Send_to_Tmux("clear && ruby script/test_lint.rb\n")<CR>
 "nnoremap <leader>r :w\|:call Send_to_Tmux("clear && be ruby script/ungoliant_benchmark.rb\n")<CR>
-nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./merry.rb index --files nodejs/chap_*.xml -r\n")<CR>
+"nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./merry.rb index --files nodejs/chap_*.xml -r\n")<CR>
+nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
+
+" Minimum number of lines to keep above/below cursor when scolling
+set scrolloff=3
 

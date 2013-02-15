@@ -11,6 +11,8 @@ alias vmtime='sudo /etc/init.d/networking restart && sudo /etc/init.d/ntp restar
 
 alias pdata='be rake db:reset db:production:data_light db:production:load_data db:migrate db:test:prepare'
 
+alias pgen='openssl rand -hex'
+
 # Git aliases
 alias g='git'
 

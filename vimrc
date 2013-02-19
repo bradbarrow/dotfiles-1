@@ -106,6 +106,7 @@ nnoremap <leader>gc :CtrlP app/controllers/<cr>
 nnoremap <leader>ga :CtrlP app/assets/<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <leader>w <C-w><C-w>
 
 " insert a real tab character
 inoremap <S-Tab> <C-V><Tab>

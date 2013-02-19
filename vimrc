@@ -5,6 +5,10 @@ set nocompatible
 
 " Smart indenting when starting new line
 set smartindent
+set autoindent
+
+" load indent file for the current filetype
+filetype indent on
 
 " Indent with two spaces
 set expandtab

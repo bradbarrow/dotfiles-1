@@ -93,6 +93,10 @@ autocmd! bufwritepost .vimrc source %
 " blowfish encryption
 set cm=blowfish
 
+" move backup files to ~/.vim/sessions
+set backupdir=~/.vim/sessions
+set dir=~/.vim/sessions
+
 " ctrlp.vim
 let g:ctrlp_max_height = 16
 let g:ctrlp_custom_ignore = ''

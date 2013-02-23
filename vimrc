@@ -90,7 +90,7 @@ nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 " auto-reload .vimrc after save.
 autocmd! bufwritepost .vimrc source %
 
-" blowfish encryption TODO more secure
+" blowfish encryption
 set cm=blowfish
 
 " ctrlp.vim

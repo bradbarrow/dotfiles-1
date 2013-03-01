@@ -24,7 +24,7 @@ alias ga='git add -p'
 
 alias gc='git ci'
 
-alias gs='git st'
+alias gs='git st -sb'
 
 alias gdp='gd && gp'
 

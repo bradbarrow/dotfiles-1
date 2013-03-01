@@ -4,6 +4,9 @@ html=.html.erb,.html.haml,.haml,.slim
 --type-add
 css=.sass,.less,.scss
 
+--type-add
+ruby=.jbuilder
+
 --type-set
 coffee=coffee
 

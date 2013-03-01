@@ -111,6 +111,8 @@ nnoremap <leader>ga :CtrlP app/assets/<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <leader>w <C-w><C-w>
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
 
 " insert a real tab character
 inoremap <S-Tab> <C-V><Tab>

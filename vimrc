@@ -97,6 +97,9 @@ set cm=blowfish
 set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions
 
+" Minimum number of lines to keep above/below cursor when scolling
+set scrolloff=3
+
 " ctrlp.vim
 let g:ctrlp_max_height = 16
 let g:ctrlp_custom_ignore = ''
@@ -113,6 +116,7 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <leader>w <C-w><C-w>
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
+nnoremap <leader>9 xea:<esc>wdw
 
 " insert a real tab character
 inoremap <S-Tab> <C-V><Tab>
@@ -138,6 +142,3 @@ nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file .
 "nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./merry.rb index --files nodejs/chap_*.xml -r\n")<CR>
 
 nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
-
-" Minimum number of lines to keep above/below cursor when scolling
-set scrolloff=3

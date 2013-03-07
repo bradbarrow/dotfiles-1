@@ -139,6 +139,4 @@ nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be rspec -f d " . g:spec_fil
 
 nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
 
-"nnoremap <leader>r :w\|:call Send_to_Tmux("clear && ./merry.rb index --files nodejs/chap_*.xml -r\n")<CR>
-
 nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>

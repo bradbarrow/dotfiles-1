@@ -10,6 +10,7 @@
   dc = diff --cached
   l = log --graph
   st = status
+  br = branch
 [core]
 	editor = vim
 [format]

@@ -140,3 +140,13 @@ nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be rspec -f d " . g:spec_fil
 nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
 
 nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
+
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>

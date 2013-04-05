@@ -71,6 +71,7 @@ au BufNewFile,BufRead *.prawn set filetype=ruby
 
 " Treat things like @foo in ruby files as keywords
 au BufNewFile,BufRead *.rb setlocal iskeyword+=@-@
+au BufNewFile,BufRead *.scss setlocal iskeyword+=#-#
 
 " Strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>

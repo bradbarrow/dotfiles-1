@@ -96,7 +96,7 @@ set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions
 
 " Minimum number of lines to keep above/below cursor when scolling
-set scrolloff=3
+set scrolloff=5
 
 " ctrlp.vim
 let g:ctrlp_max_height = 16

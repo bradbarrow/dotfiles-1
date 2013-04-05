@@ -128,23 +128,38 @@ endif
 " Di-paste
 nnoremap <leader>p :r !pbpaste<CR>
 
-" run the current file with rspec
-" nnoremap <leader>r :w\|:call Send_to_Tmux("rspec -f d " . @% . "\n")<CR>
 " set a file to run with rspec
 nnoremap <leader>T :let g:spec_file = @%<CR>
 " run the set spec file
-nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be rspec -f d " . g:spec_file . " \n")<CR>
-
-nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
+nnoremap <leader>t :w\|:call Send_to_Tmux("clear && rspec -f d " . g:spec_file . " \n")<CR>
+nnoremap <leader>t :w\|:!rspec -f d %<CR>
+"nnoremap <leader>t :w\|:exec "!rspec -f d " . g:spec_file<CR>
 
 nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
 
+nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
+
+"nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be ./script/ungoliant_benchmark.rb\n")<CR>
+
 function! PromoteToLet()
-  :normal! dd
+  normal! dd
   " :exec '?^\s*it\>'
-  :normal! P
-  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
-  :normal ==
+  normal! P
+  .s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  normal ==
 endfunction
-:command! PromoteToLet :call PromoteToLet()
-:map <leader>p :PromoteToLet<cr>
+command! PromoteToLet :call PromoteToLet()
+map <leader>p :PromoteToLet<cr>
+
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" Allow backspacing over indents and start of insertion point.
+set backspace=indent,start

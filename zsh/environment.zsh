@@ -5,3 +5,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # fucking node
 export PATH="/usr/local/share/npm/bin:$PATH"
+
+export PATH="$HOME/Library/Haskell/bin:$PATH"

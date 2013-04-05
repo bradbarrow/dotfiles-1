@@ -39,9 +39,6 @@ set smartcase
 " Disable modelines; not used, risk of security exploits.
 set modelines=0
 
-" Highlight the screen line of the cursor, easier to find the cursor.
-set cursorline
-
 " Use visual bell instead of beeping
 set visualbell
 

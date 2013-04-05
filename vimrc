@@ -163,3 +163,5 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " Allow backspacing over indents and start of insertion point.
 set backspace=indent,start
+
+nnoremap <leader>o :silent !open http://i.imgur.com/RVKUx.gif<cr>\|:redraw!<cr>

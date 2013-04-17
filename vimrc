@@ -1,7 +1,7 @@
-call pathogen#infect()
-
 " Disable vi compatibility
 set nocompatible
+
+call pathogen#infect()
 
 " Smart indenting when starting new line
 set smartindent
@@ -75,6 +75,9 @@ set ttymouse=xterm2
 set wildmenu
 set wildmode=list:longest
 
+" Allow backspacing over indents and start of insertion point.
+set backspace=indent,start
+
 " Custom file-to-syntax highlighting schemes
 au BufNewFile,BufRead *.jbuilder set filetype=ruby
 au BufNewFile,BufRead *.prawn set filetype=ruby
@@ -129,6 +132,8 @@ nnoremap <leader>9 xea:<esc>wdw
 " insert a real tab character
 inoremap <S-Tab> <C-V><Tab>
 
+imap <c-c> <esc>
+
 " checksyntax: auto-check Ruby files on save.
 if !exists('g:checksyntax')
   let g:checksyntax = {}
@@ -136,20 +141,7 @@ if !exists('g:checksyntax')
 endif
 
 " Di-paste
-nnoremap <leader>p :r !pbpaste<CR>
-
-" set a file to run with rspec
-nnoremap <leader>T :let g:spec_file = @%<CR>
-" run the set spec file
-nnoremap <leader>t :w\|:call Send_to_Tmux("clear && rspec -f d " . g:spec_file . " \n")<CR>
-nnoremap <leader>t :w\|:!rspec -f d %<CR>
-"nnoremap <leader>t :w\|:exec "!rspec -f d " . g:spec_file<CR>
-
-nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
-
-nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
-
-"nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be ./script/ungoliant_benchmark.rb\n")<CR>
+nnoremap <leader>d :r !pbpaste<CR>
 
 function! PromoteToLet()
   normal! dd
@@ -171,7 +163,18 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-" Allow backspacing over indents and start of insertion point.
-set backspace=indent,start
-
 nnoremap <leader>o :silent !open http://i.imgur.com/RVKUx.gif<cr>\|:redraw!<cr>
+nnoremap <leader>n :silent !open "http://gallery.burrowowl.net/index.php?q=/image/24669.jpg"<cr>\|:redraw!<cr>
+
+" set a file to run with rspec
+nnoremap <leader>T :let g:spec_file = @%<CR>
+" run the set spec file
+nnoremap <leader>t :w\|:call Send_to_Tmux("clear && rspec -f d " . g:spec_file . " \n")<CR>
+"nnoremap <leader>t :w\|:!rspec -f d %<CR>
+nnoremap <leader>r :w\|:exec "!rspec -f d " . g:spec_file<CR>
+
+nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
+
+nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
+
+"nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be ./script/ungoliant_benchmark.rb\n")<CR>

@@ -10,6 +10,14 @@ set autoindent
 " load indent file for the current filetype
 filetype indent on
 
+filetype plugin on
+
+" Configure browser for haskell_doc.vim
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
+
+au BufNewFile,BufRead *.hs compiler ghc
+
 " Indent with two spaces
 set expandtab
 set tabstop=2

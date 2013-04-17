@@ -29,3 +29,5 @@ alias gs='git st -sb'
 alias gdp='gd && gp'
 
 alias gl='git log'
+
+alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp *'

@@ -7,3 +7,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
+
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export GREP_OPTIONS="--color"

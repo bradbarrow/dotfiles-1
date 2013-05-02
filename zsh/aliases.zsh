@@ -37,3 +37,7 @@ alias c='clear'
 alias a='ack'
 
 alias rr='rake routes'
+
+ermahgerd() {
+  curl -d "$*" http://erpers.herokuapp.com/ | say
+}

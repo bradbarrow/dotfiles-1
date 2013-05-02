@@ -31,3 +31,9 @@ alias gdp='gd && gp'
 alias gl='git log'
 
 alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp *'
+
+alias c='clear'
+
+alias a='ack'
+
+alias rr='rake routes'

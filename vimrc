@@ -95,6 +95,10 @@ nmap ti :tabnext<CR>
 nmap tk :tabnext<CR>
 nmap tn :tabnew<CR>
 
+" window navigation
+"nnoremap wh <C-w>h
+"nnoremap wl <C-w>l
+
 " Quick-edit .vimrc
 nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 
@@ -124,7 +128,7 @@ nnoremap <leader>gc :CtrlP app/controllers/<cr>
 nnoremap <leader>ga :CtrlP app/assets/<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <C-b> :CtrlPBuffer<CR>
-nnoremap <leader>w <C-w><C-w>
+
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 nnoremap <leader>9 xea:<esc>wdw

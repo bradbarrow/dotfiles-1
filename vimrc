@@ -98,10 +98,6 @@ nmap ti :tabnext<CR>
 nmap tk :tabnext<CR>
 nmap tn :tabnew<CR>
 
-" window navigation
-"nnoremap wh <C-w>h
-"nnoremap wl <C-w>l
-
 " Quick-edit .vimrc
 nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 
@@ -139,6 +135,7 @@ nnoremap <leader>9 xea:<esc>wdw
 " insert a real tab character
 inoremap <S-Tab> <C-V><Tab>
 
+" ctrl+c to escape
 imap <c-c> <esc>
 
 " checksyntax: auto-check Ruby files on save.

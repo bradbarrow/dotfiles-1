@@ -25,7 +25,7 @@ set softtabstop=2
 set shiftwidth=2
 
 " Show line numbers
-set number
+set relativenumber
 
 " Show line and column number
 set ruler

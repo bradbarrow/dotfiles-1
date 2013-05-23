@@ -11,6 +11,7 @@
   l = log --graph
   st = status
   br = branch
+  aa = add --all
 [core]
 	editor = vim
 [format]

@@ -75,6 +75,9 @@ set ttymouse=xterm2
 set wildmenu
 set wildmode=list:longest
 
+" Split to right side
+set splitright
+
 " Allow backspacing over indents and start of insertion point.
 set backspace=indent,start
 

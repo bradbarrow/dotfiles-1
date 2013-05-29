@@ -144,6 +144,11 @@ if !exists('g:checksyntax')
   let g:checksyntax['ruby'] = {'auto': 1, 'prepare': 'compiler ruby', 'cmd': 'ruby -c', 'okrx': 'Syntax OK\|No Errors'}
 endif
 
+" selective spell checking
+if has('spell')
+  autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+endif
+
 " Di-paste
 nnoremap <leader>d :r !pbpaste<CR>
 

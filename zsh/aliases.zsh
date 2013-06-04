@@ -1,5 +1,9 @@
 # colourful ls
-alias ls='ls -G'
+if [[ -x "`whence -p dircolors`" ]]; then
+  alias ls='ls --color=auto'
+else
+  alias ls='ls -G'
+fi
 
 alias v='vim'
 

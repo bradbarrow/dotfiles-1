@@ -16,9 +16,6 @@
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/vim-slim"]
-	path = vim/bundle/vim-slim
-	url = git://github.com/bbommarito/vim-slim.git
 [submodule "vim/bundle/coffeescript"]
   path = vim/bundle/coffeescript
   url = git://github.com/kchmck/vim-coffee-script.git
@@ -40,3 +37,6 @@
 [submodule "vim/bundle/haskellmode-vim"]
 	path = vim/bundle/haskellmode-vim
 	url = git://github.com/lukerandall/haskellmode-vim.git
+[submodule "vim/bundle/vim-slim"]
+	path = vim/bundle/vim-slim
+	url = git@github.com:slim-template/vim-slim.git

@@ -1,3 +1,3 @@
 *.swp
 vim/.netrwhist
-vim/sessions/*.swp
+vim/sessions/*.sw*

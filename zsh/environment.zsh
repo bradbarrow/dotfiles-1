@@ -8,5 +8,7 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
+export PATH="$HOME/.bin:$PATH"
+
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"

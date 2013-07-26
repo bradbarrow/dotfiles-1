@@ -135,9 +135,6 @@ nnoremap <leader>9 xea:<esc>wdw
 " write as root
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
-" insert a real tab character
-inoremap <S-Tab> <C-V><Tab>
-
 " ctrl+c to escape
 imap <c-c> <esc>
 

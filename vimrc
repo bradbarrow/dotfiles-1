@@ -193,11 +193,4 @@ nnoremap <leader>n :silent !open "http://gallery.burrowowl.net/index.php?q=/imag
 nnoremap <leader>T :let g:spec_file = @%<CR>
 " run the set spec file
 nnoremap <leader>t :w\|:call Send_to_Tmux("clear && rspec -f d " . g:spec_file . " \n")<CR>
-"nnoremap <leader>t :w\|:!rspec -f d %<CR>
 nnoremap <leader>r :w\|:exec "!rspec -f d " . g:spec_file<CR>
-
-nnoremap <leader>r :w\|:call Send_to_Tmux("clear && rspec\n")<CR>
-
-nnoremap <leader>h :w\|:call Send_to_Tmux("clear && runhaskell " . g:spec_file . " \n")<CR>
-
-"nnoremap <leader>t :w\|:call Send_to_Tmux("clear && be ./script/ungoliant_benchmark.rb\n")<CR>

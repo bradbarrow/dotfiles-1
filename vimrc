@@ -34,7 +34,6 @@ set ruler
 " Color scheme
 set t_Co=256
 set background=dark
-" colorscheme jellybeans
 colorscheme hybrid
 syntax on
 

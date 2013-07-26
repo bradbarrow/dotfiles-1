@@ -10,6 +10,7 @@ set autoindent
 
 " load indent file for the current filetype
 filetype indent on
+
 filetype plugin on
 
 " Configure browser for haskell_doc.vim

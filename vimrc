@@ -5,11 +5,11 @@ call pathogen#infect()
 
 " Smart indenting when starting new line
 set smartindent
+
 set autoindent
 
 " load indent file for the current filetype
 filetype indent on
-
 filetype plugin on
 
 " Configure browser for haskell_doc.vim
@@ -131,6 +131,9 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 nnoremap <leader>9 xea:<esc>wdw
+
+" write as root
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " insert a real tab character
 inoremap <S-Tab> <C-V><Tab>

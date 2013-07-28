@@ -6,9 +6,8 @@
 [alias]
   ci = commit -v
 	co = checkout
-  d = diff
+  di = diff
   dc = diff --cached
-  l = log --graph
   st = status
   br = branch
   aa = add --all

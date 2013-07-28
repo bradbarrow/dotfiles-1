@@ -132,9 +132,6 @@ nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 nnoremap <leader>9 xea:<esc>wdw
 
-" write as root
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
 " ctrl+c to escape
 imap <c-c> <esc>
 

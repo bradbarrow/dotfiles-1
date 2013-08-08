@@ -172,17 +172,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-function! RenameFile()
-  let old_name = expand('%')
-  let new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    exec ':saveas ' . new_name
-    exec ':silent !rm ' . old_name
-    redraw!
-  endif
-endfunction
-map <leader>n :call RenameFile()<cr>
-
 nnoremap <leader>o :silent !open http://i.imgur.com/RVKUx.gif<cr>\|:redraw!<cr>
 nnoremap <leader>n :silent !open "http://gallery.burrowowl.net/index.php?q=/image/24669.jpg"<cr>\|:redraw!<cr>
 

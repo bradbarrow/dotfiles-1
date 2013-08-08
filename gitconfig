@@ -29,7 +29,5 @@
   la = !git l --all
 [core]
   editor = vim
-[format]
-  pretty = format:%C(blue)%h%C(reset) - %s %C(green)- %an%C(reset) %C(blue)(%ar)%C(reset)
 [push]
   default = current

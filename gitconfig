@@ -11,6 +11,7 @@
   st = status
   br = branch
   aa = add --all
+  fa = fetch --all
 
   # Fancy logging from Gary Bernhardt.
   #   h = head

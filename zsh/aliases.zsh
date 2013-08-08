@@ -43,3 +43,5 @@ alias rr='rake routes'
 ermahgerd() {
   curl -d "$*" http://erpers.herokuapp.com/ | say
 }
+
+alias fs='grep -RL --exclude turnip_helper.rb --exclude spec_helper.rb --exclude-dir spec/acceptance --exclude-dir spec/support --exclude-dir spec/steps "spec_helper" spec | xargs rspec'

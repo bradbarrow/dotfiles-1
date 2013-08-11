@@ -12,6 +12,7 @@
   br = branch
   aa = add --all
   fa = fetch --all
+  standup = shortlog --since=yesterday
 
   # Fancy logging from Gary Bernhardt.
   #   h = head

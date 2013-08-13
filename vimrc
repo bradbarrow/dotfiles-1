@@ -104,9 +104,6 @@ nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 " auto-reload .vimrc after save.
 autocmd! bufwritepost .vimrc source %
 
-" blowfish encryption
-set cm=blowfish
-
 " move backup files to ~/.vim/sessions
 set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions

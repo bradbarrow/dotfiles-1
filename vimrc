@@ -3,14 +3,8 @@ set nocompatible
 
 call pathogen#infect()
 
-" Smart indenting when starting new line
-set smartindent
-
-set autoindent
-
 " load indent file for the current filetype
 filetype indent on
-
 filetype plugin on
 
 " Configure browser for haskell_doc.vim
@@ -19,7 +13,9 @@ let g:haddock_browser_callformat = "%s %s"
 
 au BufNewFile,BufRead *.hs compiler ghc
 
-" Indent with two spaces
+" Indentation; 2 space default
+set smartindent
+set autoindent
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -85,8 +81,10 @@ set backspace=indent,start
 au BufNewFile,BufRead *.jbuilder set filetype=ruby
 au BufNewFile,BufRead *.prawn set filetype=ruby
 
-" Treat things like @foo in ruby files as keywords
+" Keywords
+" @foo in ruby
 au BufNewFile,BufRead *.rb setlocal iskeyword+=@-@
+" #foo in scss
 au BufNewFile,BufRead *.scss setlocal iskeyword+=#-#
 
 " Strip trailing whitespace
@@ -102,7 +100,7 @@ nmap tn :tabnew<CR>
 nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 
 " auto-reload .vimrc after save.
-autocmd! bufwritepost .vimrc source %
+autocmd! BufWritePost .vimrc source %
 
 " move backup files to ~/.vim/sessions
 set backupdir=~/.vim/sessions
@@ -125,8 +123,11 @@ nnoremap <leader>ga :CtrlP app/assets/<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <C-b> :CtrlPBuffer<CR>
 
+" Split windows
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
+
+" Convert to ruby 1.9 hash style
 nnoremap <leader>9 xea:<esc>wdw
 
 " ctrl+c to escape
@@ -140,6 +141,7 @@ endif
 
 " selective spell checking
 if has('spell')
+  " commit messages
   autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 endif
 

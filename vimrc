@@ -172,9 +172,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-nnoremap <leader>o :silent !open http://i.imgur.com/RVKUx.gif<cr>\|:redraw!<cr>
-nnoremap <leader>n :silent !open "http://gallery.burrowowl.net/index.php?q=/image/24669.jpg"<cr>\|:redraw!<cr>
-
 " set a file to run with rspec
 nnoremap <leader>T :let g:spec_file = @%<CR>
 " run the set spec file

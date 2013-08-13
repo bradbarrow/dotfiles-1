@@ -145,9 +145,6 @@ if has('spell')
   autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 endif
 
-" Auto-corrections
-abbr edn end
-
 " Di-paste
 nnoremap <leader>d :r !pbpaste<CR>
 

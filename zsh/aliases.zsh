@@ -33,10 +33,6 @@ alias gr='git r'
 
 alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp *'
 
-alias c='clear'
-
-alias a='ack'
-
 alias rr='rake routes'
 
 ermahgerd() {

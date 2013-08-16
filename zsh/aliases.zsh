@@ -28,8 +28,6 @@ alias gc='git ci'
 
 alias gs='git st -sb'
 
-alias gdp='gd && gp'
-
 alias gl='git l'
 alias gr='git r'
 

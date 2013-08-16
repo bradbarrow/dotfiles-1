@@ -1,4 +1,4 @@
-# colourful ls
+# Determine arguments for ls colours
 if [[ -x "`whence -p dircolors`" ]]; then
   alias ls='ls --color=auto'
 else

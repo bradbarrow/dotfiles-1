@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function use_zsh() {
+use_zsh() {
   zsh=`which zsh`
   if [ $SHELL != $zsh ]
   then
@@ -8,7 +8,7 @@ function use_zsh() {
   fi
 }
 
-function link_configuration() {
+link_configuration() {
   ls | while read f; do
     [ $f == "README.md" ] ||
     [ $f == "install.sh" ] ||

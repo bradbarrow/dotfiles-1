@@ -33,6 +33,4 @@ alias gr='git r'
 
 alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp *'
 
-alias rr='rake routes'
-
 alias fs='grep -RL --exclude turnip_helper.rb --exclude spec_helper.rb --exclude-dir spec/acceptance --exclude-dir spec/support --exclude-dir spec/steps "spec_helper" spec | xargs rspec'

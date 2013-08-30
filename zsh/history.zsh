@@ -11,7 +11,7 @@ setopt extended_history
 setopt hist_expire_dups_first
 
 # Do not enter command lines into the history list if they are duplicates of the previous event.
-setopt hist_ignore_dups 
+setopt hist_ignore_dups
 
 # Do not store in history commands beginning with a space.
 setopt hist_ignore_space
@@ -22,4 +22,4 @@ setopt hist_verify
 setopt inc_append_history
 
 # Share command history data
-setopt share_history 
+setopt share_history

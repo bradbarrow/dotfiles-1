@@ -145,9 +145,6 @@ if has('spell')
   autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 endif
 
-" Di-paste
-nnoremap <leader>d :r !pbpaste<CR>
-
 function! PromoteToLet()
   normal! dd
   " :exec '?^\s*it\>'

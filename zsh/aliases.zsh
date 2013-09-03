@@ -11,8 +11,6 @@ alias x='exit'
 
 alias be='bundle exec'
 
-alias vmtime='sudo /etc/init.d/networking restart && sudo /etc/init.d/ntp restart'
-
 alias pgen='openssl rand -hex'
 
 # Git aliases

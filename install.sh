@@ -17,5 +17,6 @@ link_configuration() {
   done
 }
 
+git submodule update --init
 use_zsh
 link_configuration

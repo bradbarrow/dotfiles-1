@@ -13,7 +13,7 @@ link_configuration() {
     [ $f == "README.md" ] ||
     [ $f == "install.sh" ] ||
 
-    ln -vsfh "$PWD/$f" "$HOME/.$f"
+    ln -vsfn "$PWD/$f" "$HOME/.$f"
   done
 }
 

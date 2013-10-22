@@ -16,3 +16,5 @@ export GREP_OPTIONS="--color"
 export GOPATH="$HOME/.gocode"
 
 export PATH="$GOPATH/bin:$PATH"
+
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"

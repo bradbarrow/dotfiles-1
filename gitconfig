@@ -30,5 +30,6 @@
   la = !git l --all
 [core]
   editor = vim
+	excludesfile = ~/.gitignore
 [push]
   default = current

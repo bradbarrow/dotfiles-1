@@ -12,3 +12,7 @@ export PATH="$HOME/.bin:$PATH"
 
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
+
+export GOPATH="$HOME/.gocode"
+
+export PATH="$GOPATH/bin:$PATH"

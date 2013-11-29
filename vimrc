@@ -114,6 +114,10 @@ let g:ctrlp_max_height = 16
 let g:ctrlp_custom_ignore = ''
 let g:ctrlp_custom_ignore .= '/\..*/\|'
 let g:ctrlp_custom_ignore .= '/tmp/\|'
+let g:ctrlp_custom_ignore .= '/node_modules/\|'
+let g:ctrlp_custom_ignore .= '/vendor/\|'
+let g:ctrlp_custom_ignore .= '/dist/\|'
+let g:ctrlp_custom_ignore .= '/app/bower_components/\|'
 let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 nnoremap <leader>gs :CtrlP spec/<cr>
 nnoremap <leader>gm :CtrlP app/models/<cr>

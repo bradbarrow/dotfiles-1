@@ -65,6 +65,9 @@ set timeout
 set timeoutlen=1000 " mapped sequences
 set ttimeoutlen=10  " escape sequence delay
 
+" highlight search matches
+set hlsearch
+
 " Leader of '\' is too far from home row.
 let mapleader = ";"
 let g:mapleader = ";"
@@ -110,6 +113,9 @@ nmap tn :tabnew<CR>
 
 " Quick-edit .vimrc
 nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
+
+" Enter turns off any highlighted matches, then acts as normal
+nnoremap <CR> :noh<CR><CR>
 
 " auto-reload .vimrc after save.
 autocmd! BufWritePost .vimrc source %

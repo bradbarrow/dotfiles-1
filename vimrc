@@ -68,10 +68,6 @@ set ttimeoutlen=10  " escape sequence delay
 " highlight search matches
 set hlsearch
 
-" Leader of '\' is too far from home row.
-let mapleader = ";"
-let g:mapleader = ";"
-
 " Mouse for scrolling etc in console.
 set mouse=a
 
@@ -89,6 +85,31 @@ set splitright
 " Allow backspacing over indents and start of insertion point.
 set backspace=indent,start
 
+" move backup files to ~/.vim/sessions
+set backupdir=~/.vim/sessions
+set dir=~/.vim/sessions
+
+" Minimum number of lines to keep above/below cursor when scolling
+set scrolloff=5
+
+" Leader of '\' is too far from home row.
+let mapleader = ";"
+let g:mapleader = ";"
+
+" ctrlp config
+let g:ctrlp_max_height = 16
+let g:ctrlp_custom_ignore = ''
+let g:ctrlp_custom_ignore .= '/\..*/\|'
+let g:ctrlp_custom_ignore .= '/tmp/\|'
+let g:ctrlp_custom_ignore .= '/node_modules/\|'
+let g:ctrlp_custom_ignore .= '/vendor/\|'
+let g:ctrlp_custom_ignore .= '/dist/\|'
+let g:ctrlp_custom_ignore .= '/app/bower_components/\|'
+let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
+
+" auto-reload .vimrc after save.
+autocmd! BufWritePost .vimrc source %
+
 augroup filetype_settings
   autocmd!
   autocmd BufRead,BufNewFile *.jbuilder,*.prawn setlocal filetype=ruby
@@ -103,59 +124,6 @@ augroup END
 autocmd FileType ruby setlocal iskeyword+=@-@
 
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
-" Strip trailing whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-" tab navigation
-nmap tj :tabprev<CR>
-nmap ti :tabnext<CR>
-nmap tk :tabnext<CR>
-nmap tn :tabnew<CR>
-
-" Quick-edit .vimrc
-nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
-
-" Enter turns off any highlighted matches, then acts as normal
-nnoremap <CR> :noh<CR><CR>
-
-" auto-reload .vimrc after save.
-autocmd! BufWritePost .vimrc source %
-
-" move backup files to ~/.vim/sessions
-set backupdir=~/.vim/sessions
-set dir=~/.vim/sessions
-
-" Minimum number of lines to keep above/below cursor when scolling
-set scrolloff=5
-
-" ctrlp.vim
-let g:ctrlp_max_height = 16
-let g:ctrlp_custom_ignore = ''
-let g:ctrlp_custom_ignore .= '/\..*/\|'
-let g:ctrlp_custom_ignore .= '/tmp/\|'
-let g:ctrlp_custom_ignore .= '/node_modules/\|'
-let g:ctrlp_custom_ignore .= '/vendor/\|'
-let g:ctrlp_custom_ignore .= '/dist/\|'
-let g:ctrlp_custom_ignore .= '/app/bower_components/\|'
-let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
-nnoremap <leader>gs :CtrlP spec/<cr>
-nnoremap <leader>gm :CtrlP app/models/<cr>
-nnoremap <leader>gv :CtrlP app/views/<cr>
-nnoremap <leader>gc :CtrlP app/controllers/<cr>
-nnoremap <leader>ga :CtrlP app/assets/<cr>
-nnoremap <leader>gl :CtrlP lib/<cr>
-nnoremap <C-b> :CtrlPBuffer<CR>
-
-" Split windows
-nnoremap <leader>v <C-w>v
-nnoremap <leader>s <C-w>s
-
-" Convert to ruby 1.9 hash style
-nnoremap <leader>9 xea:<esc>wdw
-
-" ctrl+c to escape
-imap <c-c> <esc>
 
 " selective spell checking
 if has('spell')
@@ -182,6 +150,39 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" ctrl+c to escape in insert mode
+imap <c-c> <esc>
+
+" Strip trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" tab navigation
+nnoremap tj :tabprev<CR>
+nnoremap ti :tabnext<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tn :tabnew<CR>
+
+" Quick-edit .vimrc
+nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
+
+" Enter turns off any highlighted matches, then acts as normal
+nnoremap <CR> :noh<CR><CR>
+
+nnoremap <leader>gs :CtrlP spec/<cr>
+nnoremap <leader>gm :CtrlP app/models/<cr>
+nnoremap <leader>gv :CtrlP app/views/<cr>
+nnoremap <leader>gc :CtrlP app/controllers/<cr>
+nnoremap <leader>ga :CtrlP app/assets/<cr>
+nnoremap <leader>gl :CtrlP lib/<cr>
+nnoremap <C-b> :CtrlPBuffer<CR>
+
+" Split windows
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
+
+" Convert to ruby 1.9 hash style
+nnoremap <leader>9 xea:<esc>wdw
 
 " set a file to run with rspec
 nnoremap <leader>T :let g:spec_file = @%<CR>

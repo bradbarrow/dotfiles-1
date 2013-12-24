@@ -11,8 +11,6 @@ filetype plugin on
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s %s"
 
-au BufNewFile,BufRead *.hs compiler ghc
-
 " Indentation; 2 space default
 set smartindent
 set autoindent
@@ -82,6 +80,7 @@ au BufNewFile,BufRead *.jbuilder set filetype=ruby
 au BufNewFile,BufRead *.prawn set filetype=ruby
 au BufNewFile,BufRead *.hbs set filetype=html
 
+au BufNewFile,BufRead *.hs compiler ghc
 
 " Keywords
 " @foo in ruby

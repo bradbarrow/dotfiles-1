@@ -96,6 +96,11 @@ augroup filetype_settings
   autocmd BufRead,BufNewFile *.hbs setlocal filetype=html
 augroup END
 
+augroup tab_settings
+  autocmd!
+  autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
+augroup END
+
 " Keywords
 " @foo in ruby
 au BufNewFile,BufRead *.rb setlocal iskeyword+=@-@

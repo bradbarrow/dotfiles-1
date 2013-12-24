@@ -172,5 +172,4 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " set a file to run with rspec
 nnoremap <leader>T :let g:spec_file = @%<CR>
 " run the set spec file
-nnoremap <leader>t :w\|:call Send_to_Tmux("clear && rspec -f d " . g:spec_file . " \n")<CR>
-nnoremap <leader>r :w\|:exec "!rspec -f d " . g:spec_file<CR>
+nnoremap <leader>t :w\|:call Send_to_Tmux("clear && bundle exec rspec -f d " . g:spec_file . " \n")<CR>

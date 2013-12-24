@@ -102,6 +102,8 @@ augroup END
 
 autocmd FileType ruby setlocal iskeyword+=@-@
 
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 " Strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 

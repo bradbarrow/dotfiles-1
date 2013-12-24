@@ -87,11 +87,11 @@ set splitright
 set backspace=indent,start
 
 " Custom file-to-syntax highlighting schemes
-au BufNewFile,BufRead *.jbuilder set filetype=ruby
-au BufNewFile,BufRead *.prawn set filetype=ruby
-au BufNewFile,BufRead *.hbs set filetype=html
-
-au BufNewFile,BufRead *.hs compiler ghc
+augroup filetype_settings
+  autocmd!
+  autocmd BufRead,BufNewFile *.jbuilder,*.prawn setlocal filetype=ruby
+  autocmd BufRead,BufNewFile *.hbs setlocal filetype=html
+augroup END
 
 " Keywords
 " @foo in ruby

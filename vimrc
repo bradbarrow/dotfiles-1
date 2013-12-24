@@ -149,12 +149,6 @@ nnoremap <leader>9 xea:<esc>wdw
 " ctrl+c to escape
 imap <c-c> <esc>
 
-" checksyntax: auto-check Ruby files on save.
-if !exists('g:checksyntax')
-  let g:checksyntax = {}
-  let g:checksyntax['ruby'] = {'auto': 1, 'prepare': 'compiler ruby', 'cmd': 'ruby -c', 'okrx': 'Syntax OK\|No Errors'}
-endif
-
 " selective spell checking
 if has('spell')
   " commit messages

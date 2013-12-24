@@ -89,7 +89,6 @@ set splitright
 " Allow backspacing over indents and start of insertion point.
 set backspace=indent,start
 
-" Custom file-to-syntax highlighting schemes
 augroup filetype_settings
   autocmd!
   autocmd BufRead,BufNewFile *.jbuilder,*.prawn setlocal filetype=ruby
@@ -101,11 +100,7 @@ augroup tab_settings
   autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
 
-" Keywords
-" @foo in ruby
-au BufNewFile,BufRead *.rb setlocal iskeyword+=@-@
-" #foo in scss
-au BufNewFile,BufRead *.scss setlocal iskeyword+=#-#
+autocmd FileType ruby setlocal iskeyword+=@-@
 
 " Strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>

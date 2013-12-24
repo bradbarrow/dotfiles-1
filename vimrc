@@ -80,6 +80,8 @@ set backspace=indent,start
 " Custom file-to-syntax highlighting schemes
 au BufNewFile,BufRead *.jbuilder set filetype=ruby
 au BufNewFile,BufRead *.prawn set filetype=ruby
+au BufNewFile,BufRead *.hbs set filetype=html
+
 
 " Keywords
 " @foo in ruby

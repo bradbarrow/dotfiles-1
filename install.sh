@@ -17,6 +17,11 @@ link_configuration() {
   done
 }
 
-git submodule update --init
+vundle_install() {
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  vim +BundleInstall +qall
+}
+
 use_zsh
 link_configuration
+vundle_install

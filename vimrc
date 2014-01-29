@@ -167,8 +167,8 @@ nnoremap tn :tabnew<CR>
 " Quick-edit .vimrc
 nnoremap <leader>ev :tabnew<CR>:e $MYVIMRC<cr>
 
-" Enter turns off any highlighted matches, then acts as normal
-nnoremap <CR> :noh<CR><CR>
+" Ctrl+L turns off any highlighted matches
+noremap <C-l> :nohlsearch<CR>
 
 nnoremap <leader>gs :CtrlP spec/<cr>
 nnoremap <leader>gm :CtrlP app/models/<cr>

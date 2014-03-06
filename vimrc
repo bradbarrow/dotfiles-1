@@ -185,3 +185,5 @@ nnoremap <leader>9 xea:<esc>wdw
 nnoremap <leader>T :let g:spec_file = @%<CR>
 " run the set spec file
 nnoremap <leader>t :w\|:call Send_to_Tmux("clear && bundle exec rspec -f d " . g:spec_file . " \n")<CR>
+
+nnoremap <leader>r :w\|:exec "!bundle exec rspec -f d " . g:spec_file<CR>

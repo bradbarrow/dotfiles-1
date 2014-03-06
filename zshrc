@@ -16,3 +16,6 @@ done
 for source in $pre_sources $auto_sources $post_sources; do
   source ~/.zsh/$source.zsh
 done
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

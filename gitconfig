@@ -28,6 +28,7 @@
   ra = !git r --all
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
+  pusheen = push
 [core]
   editor = vim
 	excludesfile = ~/.gitignore

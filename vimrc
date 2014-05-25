@@ -18,6 +18,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wlangstroth/vim-haskell'
+Bundle 'derekwyatt/vim-scala'
 
 " load indent file for the current filetype
 filetype indent on

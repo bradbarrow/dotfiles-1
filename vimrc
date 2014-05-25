@@ -103,6 +103,8 @@ let g:ctrlp_max_height = 16
 let g:ctrlp_custom_ignore = ''
 let g:ctrlp_custom_ignore .= '/\..*/\|'
 let g:ctrlp_custom_ignore .= '/tmp/\|'
+let g:ctrlp_custom_ignore .= '/project/\|'
+let g:ctrlp_custom_ignore .= '/target/\|'
 let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 
 " auto-reload .vimrc after save.

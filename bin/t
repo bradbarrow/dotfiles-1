@@ -1,0 +1,11 @@
+#!/bin/bash
+
+fifo=.test-commands
+
+if [ ! -p $fifo ]; then
+  mkfifo $fifo
+fi
+
+while true; do
+  sh -c "$(cat $fifo)"
+done

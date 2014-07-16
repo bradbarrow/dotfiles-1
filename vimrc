@@ -7,7 +7,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'ags/tslime.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jnwhiteh/vim-golang'
@@ -19,6 +18,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'derekwyatt/vim-scala'
+
+if filereadable(expand("~/.vim/functions.vim"))
+  source ~/.vim/functions.vim
+endif
 
 " load indent file for the current filetype
 filetype indent on
@@ -184,9 +187,6 @@ nnoremap <leader>s <C-w>s
 " Convert to ruby 1.9 hash style
 nnoremap <leader>9 xea:<esc>wdw
 
-" set a file to run with rspec
-nnoremap <leader>T :let g:spec_file = @%<CR>
-" run the set spec file
-nnoremap <leader>t :w\|:call Send_to_Tmux("clear && bundle exec rspec -f d " . g:spec_file . " \n")<CR>
-
-nnoremap <leader>r :w\|:exec "!bundle exec rspec -f d " . g:spec_file<CR>
+nnoremap <leader>T :call SetTestFileToCurrentFile()<CR>
+nnoremap <leader>t :w\|:call SendCurrentTestToPipe()<CR>
+nnoremap <leader>r :w\|:call ModalRunCurrentTest()<CR>

@@ -7,5 +7,7 @@ if [ ! -p $fifo ]; then
 fi
 
 while true; do
-  sh -c "$(cat $fifo)"
+  command="$(cat $fifo)"
+  echo "running '$command'"
+  sh -c "$command"
 done

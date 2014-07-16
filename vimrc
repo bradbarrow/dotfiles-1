@@ -134,24 +134,10 @@ if has('spell')
   autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 endif
 
-function! PromoteToLet()
-  normal! dd
-  " :exec '?^\s*it\>'
-  normal! P
-  .s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
-  normal ==
-endfunction
-command! PromoteToLet :call PromoteToLet()
-map <leader>p :PromoteToLet<cr>
+" convert 'a = 1' to 'let(:a) { 1 }'
+nnoremap <leader>p :PromoteToLet<cr>
 
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
+" insert a tab or try to complete word
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " ctrl+c to escape in insert mode

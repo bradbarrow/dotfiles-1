@@ -1,3 +1,21 @@
+function! PromoteToLet()
+  normal! dd
+  " :exec '?^\s*it\>'
+  normal! P
+  .s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  normal ==
+endfunction
+command! PromoteToLet :call PromoteToLet()
+
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+
 " async test running
 
 function! SetTestFileToCurrentFile()

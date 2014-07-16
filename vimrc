@@ -18,6 +18,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'chriskempson/base16-vim'
 
 if filereadable(expand("~/.vim/functions.vim"))
   source ~/.vim/functions.vim
@@ -44,7 +45,7 @@ set ruler
 " Color scheme
 set t_Co=256
 set background=dark
-colors lucius
+colors base16-default
 syntax on
 
 " Highlight trailing whitespace etc

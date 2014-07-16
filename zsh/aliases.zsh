@@ -11,8 +11,6 @@ alias x='exit'
 
 alias be='bundle exec'
 
-alias pgen='openssl rand -base64'
-
 # Git aliases
 alias g='git'
 

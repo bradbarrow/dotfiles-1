@@ -141,7 +141,7 @@ nnoremap <leader>p :PromoteToLet<cr>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " ctrl+c to escape in insert mode
-imap <c-c> <esc>
+inoremap <c-c> <esc>
 
 " Strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>

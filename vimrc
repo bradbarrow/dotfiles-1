@@ -1,24 +1,27 @@
 " Disable vi compatibility
 set nocompatible
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'scrooloose/syntastic'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'wlangstroth/vim-haskell'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'chriskempson/base16-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'scrooloose/syntastic'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'wlangstroth/vim-haskell'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'chriskempson/base16-vim'
+
+call vundle#end()
 
 if filereadable(expand("~/.vim/functions.vim"))
   source ~/.vim/functions.vim

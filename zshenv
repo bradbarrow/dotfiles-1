@@ -7,7 +7,6 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 export PATH="$HOME/.bin:$PATH"
 
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"

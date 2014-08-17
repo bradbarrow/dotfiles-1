@@ -1,21 +1,13 @@
-# https://github.com/pda/dotzsh/blob/master/rc.zsh
+# Report the status of background jobs immediately, rather than waiting until
+# just before printing a prompt.
+setopt notify
 
-# sources to load first
-pre_sources=( options )
+# Parameter expansion, command substitution and arithmetic expansion are
+# performed in prompts.
+setopt prompt_subst
 
-# sources to load last
-post_sources=()
-
-# load remaining sources automatically
 auto_sources=(`for f in ~/.zsh/*.zsh; do basename $f .zsh; done`)
 
-for source in rc $pre_sources $post_sources; do
-  auto_sources[(i)$source]=""
-done
-
-for source in $pre_sources $auto_sources $post_sources; do
+for source in $auto_sources; do
   source ~/.zsh/$source.zsh
 done
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8

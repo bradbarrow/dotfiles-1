@@ -20,6 +20,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'wlangstroth/vim-haskell'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'chriskempson/base16-vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 

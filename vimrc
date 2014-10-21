@@ -48,8 +48,8 @@ set ruler
 
 " Color scheme
 set t_Co=256
-set background=dark
-colors base16-default
+set background=light
+colors solarized
 syntax on
 
 " Highlight trailing whitespace etc

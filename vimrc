@@ -61,13 +61,6 @@ set ttimeoutlen=10  " escape sequence delay
 " Highlight search matches.
 set hlsearch
 
-" Mouse for scrolling etc in console.
-set mouse=a
-
-" Resize split panes with mouse within tmux.
-" Also get live-updated text selection with mouse drag.
-set ttymouse=xterm2
-
 " Navigatable tab completion from Vim command line
 set wildmenu
 set wildmode=list:longest

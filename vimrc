@@ -10,16 +10,12 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'jnwhiteh/vim-golang'
 Plugin 'scrooloose/syntastic'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wlangstroth/vim-haskell'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()

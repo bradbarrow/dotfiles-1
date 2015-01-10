@@ -157,10 +157,6 @@ nnoremap <leader>ga :CtrlP app/assets/<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <C-b> :CtrlPBuffer<CR>
 
-" Split windows
-nnoremap <leader>v <C-w>v
-nnoremap <leader>s <C-w>s
-
 " Convert to ruby 1.9 hash style
 nnoremap <leader>9 xea:<esc>wdw
 

@@ -24,9 +24,8 @@ if filereadable(expand("~/.vim/functions.vim"))
   source ~/.vim/functions.vim
 endif
 
-" load indent file for the current filetype
-filetype indent on
-filetype plugin on
+" File type detection and language dependent indenting.
+filetype plugin indent on
 
 " Indentation; 2 space default
 set smartindent
@@ -36,26 +35,14 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" Show line numbers
+" Line numbers are relative to the cursor line.
 set relativenumber
 
-" Show line and column number
+" Show line and column number of the cursor.
 set ruler
 
-" Color scheme
-set t_Co=256
-set background=light
-colors solarized
-syntax on
-
-" Highlight trailing whitespace etc
-highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+\%#\@<!$/
-
-" Ignore case
-set ignorecase
-set smartcase
+" Ignore case in patterns, unless the pattern contains upper case characters.
+set ignorecase smartcase
 
 " Disable modelines; not used, risk of security exploits.
 set modelines=0
@@ -71,7 +58,7 @@ set timeout
 set timeoutlen=1000 " mapped sequences
 set ttimeoutlen=10  " escape sequence delay
 
-" highlight search matches
+" Highlight search matches.
 set hlsearch
 
 " Mouse for scrolling etc in console.
@@ -98,6 +85,17 @@ set dir=~/.vim/sessions
 " Minimum number of lines to keep above/below cursor when scolling
 set scrolloff=5
 
+" Color scheme
+set t_Co=256
+set background=light
+colors solarized
+syntax on
+
+" Highlight trailing whitespace etc
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+\%#\@<!$/
+
 " Leader of '\' is too far from home row.
 let mapleader = ";"
 let g:mapleader = ";"
@@ -114,7 +112,7 @@ let g:ctrlp_custom_ignore .= '/app/bower_components/\|'
 let g:ctrlp_custom_ignore .= '/plugins/\|'
 let g:ctrlp_custom_ignore .= 'REGEX_TERMINATOR'
 
-" auto-reload .vimrc after save.
+" Reload .vimrc after save.
 autocmd! BufWritePost .vimrc source %
 
 augroup filetype_settings
@@ -125,19 +123,14 @@ augroup END
 
 augroup tab_settings
   autocmd!
-  autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
   autocmd FileType php setlocal shiftwidth=2 tabstop=2 noexpandtab
 augroup END
 
+" Treat @foo as a single word (useful for tab completion).
 autocmd FileType ruby setlocal iskeyword+=@-@
 
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
-" selective spell checking
-if has('spell')
-  " commit messages
-  autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
-endif
+" Enable spell checking in commit messages.
+autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
 " convert 'a = 1' to 'let(:a) { 1 }'
 nnoremap <leader>p :PromoteToLet<cr>

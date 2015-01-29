@@ -29,6 +29,6 @@ alias gr='git r'
 
 alias gwip='git add --all . && git commit -m "WIP"'
 
-alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp *'
+alias retag='ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=node_modules *'
 
 alias fs='grep -RL --exclude turnip_helper.rb --exclude spec_helper.rb --exclude-dir spec/acceptance --exclude-dir spec/support --exclude-dir spec/fixtures --exclude-dir spec/pages "spec_helper" spec | xargs rspec'

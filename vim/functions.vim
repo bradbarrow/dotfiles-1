@@ -27,7 +27,7 @@ function! GetCurrentTestFile()
 endfunction
 
 function! GetTestRunner()
-  return "rspec -f d"
+  return "rspec -f d --fail-fast"
 endfunction
 
 function! GetCurrentTestCommand()
